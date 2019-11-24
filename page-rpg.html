@@ -18,25 +18,24 @@
 			<div id="page-wrapper">
 
 				<!-- Header -->
-					<header id="header">
-						<h1><a href="index.html">Francis Gagné</a></h1>
-						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="index.html">Home</a></li>
-											<li><a href="generic.html">Generic</a></li>
-											<li><a href="elements.html">Elements</a></li>
-											<li><a href="#">Sign Up</a></li>
-											<li><a href="#">Log In</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
-					</header>
+				<header id="header">
+					<h1><a href="index.html">Francis Gagné</a></h1>
+					<nav id="nav">
+						<ul>
+							<li class="special">
+								<a href="#menu" class="menuToggle"><span>Menu</span></a>
+								<div id="menu">
+									<ul>
+										<li><a href="index.html#">Home</a></li>
+										<li><a href="index.html#one">About me</a></li>
+										<li><a href="index.html#two">Projects</a></li>
+										<li><a href="index.html#three">Get in touch</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+					</nav>
+				</header>
 
 				<!-- Main -->
 					<article id="main">
@@ -53,11 +52,61 @@
 								<h3>My first real video game project, featuring robots and trees.</h3>
 								
 								<p>
-									For this project, I wanted to try programming a simple RPG with saving mechanics as well as an inventory system
-									and a skill tree. I created a robot character and two different ennemies, which would attack the player
-									if close enough. 
+									For this project, I wanted to try programming a simple RPG to learn about different mechanics in Unity. It was one
+									of my first real game project. In retrospect, it was a projet way too large for a single developper, but I can definitely 
+									say I learned a lot making it, even though it is not finished. Here are some of the mechanics I implemented:
 								</p>
-								<div class="custom"><img class="resize_fit_center" src="images/rpg_gif.gif" alt="" /></div>ulvinar lectus. Morbi diam ante, vulputate et imperdiet eget, fermentum non dolor. Ut eleifend sagittis tincidunt. Sed viverra commodo mi, ac rhoncus justo. Duis neque ligula, elementum ut enim vel, posuere finibus justo. Vivamus facilisis maximus nibh quis pulvinar. Quisque hendrerit in ipsum id tellus facilisis fermentum. Proin mauris dui, at vestibulum sit amet, auctor bibendum neque.</p>
+
+								<h4>Character movement</h4>
+								<p>
+									The robot character I made for this game had no animations and only 2 poses; one with the arms
+									raised to hold a weapon, one with arms down. When the player would press 'E', the character's pose would
+									lerp between the two poses. The player movement was really simple; its position would be changed by the ASWD keys,
+									and the character would lean towards the direction of motion. Also, its orientation would face where the mouse would point.
+								</p>
+
+								<div class="custom"><img class="resize_fit_center" src="images/robot_motion.gif" alt="" /></div>
+
+								<hr/>
+
+								<h4>Inventory</h4>
+								<p>
+									I also implemented an inventory system where you could store weapons, armors and miscellaneous items. You could see
+									the stats of all items, and you could put some items in a favorite spot (the bottom right circle) that you could
+									access by pressing Control instead of opening the entire inventory.
+								</p>
+
+								<div class="custom"><img class="resize_fit_center" src="images/inventory.gif" alt="" /></div>
+
+								<hr/>
+
+								<h4>Saving system</h4>
+
+								<p>
+									I implemented a saving system where the game would save the player's position, inventory and stats, and could
+									load it on demand. It would start by storing all data inside a serializable Save class,
+									and then save all information into a binary file. The binary file could be deserialized to load the game.
+								</p>
+
+								<div class="custom"><img class="resize_fit_center" src="images/save.png" alt="" /></div>
+
+								<hr/>
+
+								<h4>A semi-open world map</h4>
+
+								<p>Here are a few pictures of the map I made:</p>
+
+								<section>
+									<div class="box alt">
+										<div class="row gtr-50 gtr-uniform">
+											<div class="col-6"><span class="image fit"><img src="images/rpg_pic1.png" alt="" /></span></div>
+											<div class="col-6"><span class="image fit"><img src="images/rpg_pic4.png" alt="" /></span></div>
+											<div class="col-6"><span class="image fit"><img src="images/rpg_pic3.png" alt="" /></span></div>
+											<div class="col-6"><span class="image fit"><img src="images/rpg_pic2.png" alt="" /></span></div>
+										</div>
+									</div>
+								</section>
+
 
 							</div>
 						</section>
