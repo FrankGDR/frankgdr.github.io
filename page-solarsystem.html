@@ -56,7 +56,7 @@
 									James S. A. Corey's books from the Expanse serie, I had the idea to create a game taking place in the Solar System,
 									where you could set up colonies on moons, mine asteroids and control complete fleets of spaceships. Since I study physics,
 									I also wanted to make sure that the physics behind the motion of planets and moons in the system 
-									was physically realistic. Due to a lack of free time, I've never really had time to implement the game's mechanisms; however,
+									was physically realistic. Due to a lack of free time, I've never really had time to implement the game's mechanics; however,
 									I was able to create a realistic representation of the Solar System with true keplerian orbits.
 								</p>
 
@@ -72,11 +72,11 @@
 								<p>
 									Of course, knowing that the Solar System is incredibly big compared to planetary systems, I knew I had to compute the planets
 									and moons' positions with double precision. I made a custom double precision Transform class to help compute the positions of all 
-									astronomical bodies. However, Unity's game space only works with built-in float Transform; I had to find a way to transpose
+									astronomical bodies. However, Unity's game space only works with built-in float Transform. I had to find a way to transpose
 									my double positions into floats. Of course, simply transposing my values inside Unity's space with scaling didn't work; if my
 									system was too big, the far away planets would jitter, and if it was too small, the moons wouldn't have enough precision and would
 									jitter. Until then, I was keeping my Solar System static and moving my camera from planet to planet. The simple fix I found
-									was to instead move the Solar System and keep the camera in place; this way, the focus of the camera was always
+									was to instead move the Solar System and keep the camera in place. That way, the focus of the camera was always
 									on the origin of the 3D space, where I could benefit from the maximum floating point precision.
 								</p>
 
@@ -89,18 +89,20 @@
 					</article>
 
 				<!-- Footer -->
-					<footer id="footer">
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						<ul class="copyright">
-							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
+				<footer id="three">
+					<ul class="icons">
+						<h1>Get in touch!</h1>
+						<!--
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>-->
+						<li><a href="http://www.linkedin.com/in/francisgagne1" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href= "mailto: frankgdr@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer>
 
 			</div>
 
